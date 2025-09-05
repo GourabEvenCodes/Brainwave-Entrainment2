@@ -1,0 +1,200 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="utf-8" />
+<meta name="viewport" content="width=device-width,initial-scale=1" />
+<title>Isochronic Tones Experiment — for supporting application for Audio Producer role at UMG — Gourab Dey</title>
+<meta name="description" content="Embeds and technical notes for two wellness remixes: Adventure of a Lifetime (Hemi-Sync) and Gravity (Isochronic). CV-style layout, concise and professional.">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;600;800&display=swap" rel="stylesheet">
+<style>
+  :root{
+    --bg:#0f1420;        /* dark slate background */
+    --card:#151b27;      /* card background */
+    --ink:#ebf2ff;       /* primary text */
+    --muted:#a7b3c7;     /* secondary text */
+    --line:#263043;      /* borders */
+    --accent:#58a6ff;    /* links / accents */
+    --tag:#1a2333;       /* tag pill bg */
+    --tag-ink:#d6e3ff;   /* tag text */
+    --callout:#111a2a;   /* callout bg */
+    --callout-b:#2b3a56; /* callout border */
+  }
+  *{box-sizing:border-box}
+  html,body{height:100%}
+  body{
+    margin:0; background:radial-gradient(1000px 600px at 10% -10%, #142033 0%, #0f1420 45%, #0f1420 100%), var(--bg);
+    color:var(--ink); font:15.5px/1.55 "Inter", ui-sans-serif, system-ui, -apple-system, Segoe UI, Roboto, Arial;
+  }
+  a{color:var(--accent); text-decoration:none} a:hover{text-decoration:underline}
+  .wrap{max-width:1100px; margin:0 auto; padding:24px 16px 64px}
+
+  /* CV header */
+  header.cv{
+    background:linear-gradient(180deg,#0f1625, #111a2a);
+    border:1px solid var(--line); border-radius:16px; padding:18px;
+    box-shadow:0 10px 35px rgba(0,0,0,.35);
+  }
+  .hdr-top{display:flex; align-items:flex-start; justify-content:space-between; gap:16px; flex-wrap:wrap; border-left:6px solid var(--accent); padding-left:14px}
+  h1{margin:0; font-weight:800; letter-spacing:-.02em; font-size:clamp(1.4rem,2.2vw+0.8rem,2.1rem)}
+  .sub{margin:6px 0 0 0; color:#cfdaf0; font-weight:600}
+  .contact{
+    display:grid; gap:6px; grid-template-columns: repeat(2, minmax(240px,1fr));
+    margin-top:12px; color:var(--muted)
+  }
+  .contact b{color:#d9e6ff}
+  .contact a{word-break:break-all}
+
+  /* Grid and cards */
+  section{margin-top:14px}
+  .grid{display:grid; gap:14px}
+  @media (min-width:960px){ .grid.two{grid-template-columns:1fr 1fr} }
+  .card{background:var(--card); border:1px solid var(--line); border-radius:14px; padding:14px; box-shadow:0 6px 20px rgba(0,0,0,.25)}
+  .h2{margin:0 0 8px; font-weight:800; letter-spacing:-.01em}
+  .track-head{display:flex; flex-wrap:wrap; gap:8px; align-items:center; margin-bottom:6px}
+  .pill{padding:4px 10px; border-radius:999px; background:var(--tag); color:var(--tag-ink); font-size:.8rem; border:1px solid var(--line)}
+  .meta{display:flex; flex-wrap:wrap; gap:8px; margin:6px 0 10px}
+  .meta .tag{padding:4px 10px; border-radius:999px; background:#10182a; border:1px solid var(--line); color:#d2def5; font-size:.8rem}
+
+  .iframeWrap{position:relative; width:100%; padding-bottom:56.25%; border-radius:12px; overflow:hidden; border:1px solid var(--line); background:#0a1120}
+  .iframeWrap iframe{position:absolute; inset:0; width:100%; height:100%; border:0}
+
+  .tech{border:1px solid var(--line); border-radius:12px; padding:12px}
+  .tech h4{margin:0 0 8px; font-size:1rem}
+  .tech dl{display:grid; grid-template-columns:max-content 1fr; gap:6px 14px; margin:0}
+  .tech dt{font-weight:700; color:#dbe6ff}
+  .tech dd{margin:0; color:#c6d3ec}
+  .tech ul{margin:6px 0 0 18px; color:#c6d3ec}
+
+  .callout{background:var(--callout); border:1px solid var(--callout-b); border-radius:12px; padding:10px}
+
+  .how .step{border:1px solid var(--line); border-radius:12px; padding:12px}
+  .how h3{margin:0 0 8px; font-size:1.02rem; letter-spacing:-.01em}
+  .how ul{margin:6px 0 0 18px}
+</style>
+</head>
+<body>
+  <div class="wrap">
+    <header class="cv" id="overview">
+      <div class="hdr-top">
+        <div>
+          <h1>Isochronic Tones Experiment</h1>
+          <div class="sub">for supporting application for Audio Producer role at UMG (Sollos)</div>
+        </div>
+      </div>
+      <div class="contact">
+        <div><b>Name:</b> Gourab Dey</div>
+        <div><b>Country:</b> United Kingdom</div>
+        <div><b>Email:</b> <a href="mailto:gourabwhosings@gmail.com">gourabwhosings@gmail.com</a></div>
+        <div><b>Phone:</b> <a href="tel:+447786579991">07786579991</a></div>
+        <div style="grid-column:1 / -1"><b>LinkedIn:</b> <a target="_blank" rel="noopener" href="https://www.linkedin.com/in/gourab-who-creates?utm_source=share&utm_campaign=share_via&utm_content=profile&utm_medium=ios_app">https://www.linkedin.com/in/gourab-who-creates</a></div>
+      </div>
+    </header>
+
+    <!-- Tracks side by side: Adventure (left), Gravity (right) -->
+    <section class="grid two">
+
+      <!-- Adventure -->
+      <article id="adventure" class="card">
+        <div class="track-head">
+          <h2 class="h2" style="margin-right:6px">Adventure of a Lifetime (Coldplay) — Focus Mix</h2>
+          <span class="pill">Hemi-Sync · Headphones Required</span>
+        </div>
+        <div class="meta" aria-label="quick metadata">
+          <span class="tag">BPM 112</span>
+          <span class="tag">Harmonic Fit: A=432 (−8 Hz)</span>
+          <span class="tag">Beats: L 14 Hz / R 28 Hz</span>
+        </div>
+
+        <div class="iframeWrap" style="margin-bottom:10px">
+          <iframe src="https://drive.google.com/file/d/1VO_5THskcx6Xt2JrX4usKKf3iZgzg7Ej/preview" allowfullscreen scrolling="no" title="Adventure of a Lifetime — Drive Preview"></iframe>
+        </div>
+
+        <div class="grid" style="gap:10px">
+          <div class="tech">
+            <h4>Technical Summary</h4>
+            <dl>
+              <dt>Objective</dt><dd>Focus via beta-range entrainment.</dd>
+              <dt>Method</dt><dd>Hemi-sync style per-ear beats using amplitude-modulated carriers (headphones required).</dd>
+              <dt>Beat Programme</dt><dd>Left 14 Hz; Right 28 Hz — both factors of 112 BPM; 28 = 2 × 14.</dd>
+              <dt>Harmonic Fit</dt><dd>Master retuned to A=432 (−8 Hz) to explore the 432 Hz Solfeggio context for calming/well-being. No constant sine bed is sustained; carriers are used only to impart beats.</dd>
+              <dt>Production</dt><dd>SpectraLayers 10 → Cubase; added pads/keys; EQ and sidechain; ShaperBox 3; iZotope RX.</dd>
+              <dt>Monitoring & Use</dt><dd>Moderate listening level on headphones to preserve distinct L/R beat geometry.</dd>
+            </dl>
+          </div>
+
+          <aside class="callout">
+            <b>Experimentation Path</b>
+            <ul>
+              <li>A=444 to place C5 approx. 528 Hz (Solfeggio test, not used in this render).</li>
+              <li>Dolby Atmos session with controlled binaural downmix to test spatial separability and translation of per-ear beats.</li>
+            </ul>
+          </aside>
+        </div>
+      </article>
+
+      <!-- Gravity -->
+      <article id="gravity" class="card">
+        <div class="track-head">
+          <h2 class="h2" style="margin-right:6px">Gravity (John Mayer) — Relax Mix</h2>
+          <span class="pill">Isochronic · No Headphones Required</span>
+        </div>
+        <div class="meta" aria-label="quick metadata">
+          <span class="tag">BPM 124</span>
+          <span class="tag">Key: G (A=440)</span>
+          <span class="tag">Carrier for pulses: 392 Hz (G4)</span>
+          <span class="tag">Beat: 4 Hz (Low-Theta)</span>
+        </div>
+
+        <div class="iframeWrap" style="margin-bottom:10px">
+          <iframe src="https://drive.google.com/file/d/18bNWMkpbbkiMzmhx_h0CyEaDXoFmyBXW/preview" allowfullscreen scrolling="no" title="Gravity — Drive Preview"></iframe>
+        </div>
+
+        <div class="tech">
+          <h4>Technical Summary</h4>
+          <dl>
+            <dt>Objective</dt><dd>Relaxation support via low-theta entrainment.</dd>
+            <dt>Method</dt><dd>Isochronic pulses (single-channel amplitude modulation) for a strong frequency-following response.</dd>
+            <dt>Beat Programme</dt><dd>4 Hz chosen as an integer factor of 124 BPM to preserve rhythmic consonance.</dd>
+            <dt>Harmonic Fit</dt><dd>Key centre G (A=440). Use 392 Hz (G4) strictly as a modulation carrier for the 4 Hz pulses. No constant sine bed.</dd>
+            <dt>Production</dt><dd>SpectraLayers 10 → Cubase; rainy ambience and white-noise bed; reverb-forward vocals; EQ trims in upper mids; gentle LPF with low-mid support; ShaperBox 3; iZotope RX.</dd>
+            <dt>Monitoring & Use</dt><dd>Comfortable level; enjoyable on both speakers and headphones.</dd>
+          </dl>
+        </div>
+      </article>
+
+    </section>
+
+    <!-- How it Works -->
+    <section id="how" class="card how" style="margin-top:14px">
+      <h2 class="h2">How it Works — Process (Per Clip)</h2>
+      <div class="grid two">
+        <div class="step">
+          <h3>Adventure of a Lifetime — Hemi-Sync Process</h3>
+          <ul>
+            <li>Target and strategy: Focus via per-ear beta beats (14 Hz L, 28 Hz R).</li>
+            <li>Temporal fit: 14 and 28 are factors of 112 BPM; 28 = 2 × 14.</li>
+            <li>Harmonic fit: Retune to A=432 (−8 Hz) for the 432 Hz Solfeggio context; carriers only impart beats (no constant sine bed).</li>
+            <li>Signal build: Ear-specific amplitude-modulated carriers, level-balanced under stems.</li>
+            <li>Mix notes: SpectraLayers 10 → Cubase; pads/keys; EQ and sidechain to carve space; ShaperBox 3; iZotope RX.</li>
+            <li>Experimentation: A=444 to place C5 approx. 528 Hz; Atmos → binaural downmix for spatial separability.</li>
+            <li>Monitoring: Headphones required at moderate level.</li>
+          </ul>
+        </div>
+
+        <div class="step">
+          <h3>Gravity — Isochronic Process</h3>
+          <ul>
+            <li>Target and strategy: Low-theta support using 4 Hz isochronic pulses.</li>
+            <li>Temporal fit: 4 Hz as integer factor of 124 BPM to maintain temporal consonance.</li>
+            <li>Harmonic fit: Key G; use 392 Hz (G4) as modulation carrier only (no constant sine bed).</li>
+            <li>Signal build: 392 Hz tone amplitude-modulated at 4 Hz and blended beneath stems.</li>
+            <li>Mix notes: SpectraLayers 10 → Cubase; rain and white noise beds; reverb-forward vocals; EQ trims in upper mids; gentle LPF/low-mid lift; ShaperBox 3; RX utilities.</li>
+            <li>Monitoring: Speakers or headphones at comfortable level.</li>
+          </ul>
+        </div>
+      </div>
+    </section>
+  </div>
+</body>
+</html>
